@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="SteveB27\PrintInvoice\Api\InvoicePrintInterface"
+                type="SteveB27\PrintInvoice\Model\Api\InvoicePrint" />
+    <preference for="SteveB27\PrintInvoice\Api\RequestItemInterface"
+                type="SteveB27\PrintInvoice\Model\Api\RequestItem" />
+    <preference for="SteveB27\PrintInvoice\Api\ResponseItemInterface"
+                type="SteveB27\PrintInvoice\Model\Api\ResponseItem" />
+</config>
