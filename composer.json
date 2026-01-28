@@ -2,7 +2,7 @@
     "name": "steveb27/printinvoice",
     "description": "SteveB27 PrintInvoice",
     "require": {
-        "php": "~7.3.0||~7.4.0||~8.1.0",
+        "php": "~7.4.0||~8.0.0||~8.1.0||~8.2.0",
         "magento/module-store": "*",
         "magento/module-theme": "*",
         "magento/module-widget": "*",
@@ -11,7 +11,7 @@
         "magento/magento-composer-installer": "*"
     },
     "type": "magento2-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
