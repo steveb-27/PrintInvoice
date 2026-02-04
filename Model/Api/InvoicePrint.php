@@ -2,6 +2,7 @@
 
 namespace SteveB27\PrintInvoice\Model\Api;
 
+use Magento\Framework\Exception\NoSuchEntityException;
 use SteveB27\PrintInvoice\Api\InvoicePrintInterface;
 use SteveB27\PrintInvoice\Api\RequestItemInterfaceFactory;
 use SteveB27\PrintInvoice\Api\ResponseItemInterfaceFactory;
@@ -63,7 +64,7 @@ class InvoicePrint implements InvoicePrintInterface
      *
      * @param int $id
      * @return \SteveB27\PrintInvoice\Api\ResponseItemInterface
-     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     * @throws NoSuchEntityException
      */
     public function get(int $id)
     {
@@ -82,12 +83,17 @@ class InvoicePrint implements InvoicePrintInterface
 
     /**
      * @param int $id
-     * @return \Magento\Sales\Model\Order\Invoice\
+     * @return mixed
+     * @throws NoSuchEntityException
      */
     private function getInvoice(int $id)
     {
-        $invoice = $this->invoiceFactory->create();
-        $invoice->load($id);
+        $invoice = $this->invoiceFactory->create()->load($id);
+        if (!$invoice->getId()) {
+            throw new NoSuchEntityException(
+                __('Invoice with ID %1 does not exist.', $id)
+            );
+        }
 
         return $invoice;
     }

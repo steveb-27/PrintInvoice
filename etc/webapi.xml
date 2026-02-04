@@ -4,7 +4,7 @@
     <route url="/V1/invoices/:id/print" method="GET">
         <service class="SteveB27\PrintInvoice\Api\InvoicePrintInterface" method="get" />
         <resources>
-            <resource ref="Magento_Sales::invoices" />
+            <resource ref="Magento_Sales::sales_invoice" />
         </resources>
     </route>
 </routes>
