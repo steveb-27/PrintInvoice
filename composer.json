@@ -2,7 +2,7 @@
     "name": "steveb27/printinvoice",
     "description": "Provides REST API endpoint for a printable invoice PDF in third party automations.",
     "require": {
-        "php": "~8.0.0||~8.1.0||~8.2.0||~8.3.0",
+        "php": "~8.0.0||~8.1.0||~8.2.0||~8.3.0||~8.4.0",
         "magento/module-store": "*",
         "magento/module-theme": "*",
         "magento/module-widget": "*",
