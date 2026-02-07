@@ -1,17 +1,16 @@
 {
     "name": "steveb27/printinvoice",
-    "description": "SteveB27 PrintInvoice",
+    "description": "Provides REST API endpoint for a printable invoice PDF in third party automations.",
     "require": {
-        "php": "~8.0.0.0||~8.1.0||~8.2.0||~8.3.0",
+        "php": "~8.0.0||~8.1.0||~8.2.0||~8.3.0",
         "magento/module-store": "*",
         "magento/module-theme": "*",
         "magento/module-widget": "*",
         "magento/module-customer": "*",
-        "magento/framework": "*",
-        "magento/magento-composer-installer": "*"
+        "magento/framework": "*"
     },
     "type": "magento2-module",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
@@ -21,13 +20,5 @@
         "psr-4": {
             "SteveB27\\PrintInvoice\\": ""
         }
-    },
-    "extra": {
-        "map": [
-            [
-                "*",
-                "SteveB27/PrintInvoice"
-            ]
-        ]
     }
 }
